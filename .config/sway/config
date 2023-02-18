@@ -1,0 +1,9 @@
+# Windows Key
+set $mod Mod4
+
+# Prefered Terminal
+set $term terminator
+
+include ~/.config/sway/conf-enabled/*.conf
+
+include /etc/sway/config.d/*

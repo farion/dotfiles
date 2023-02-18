@@ -1,0 +1,15 @@
+font=Lato
+background-color=#000000ff
+progress-color=#5f27cdd0
+icons=1
+padding=10
+width=450
+border-color=#00d93aff
+border-size=1
+margin=10
+border-radius=2
+icon-path=/usr/share/icons/ubuntu-mono-dark/
+actions=1
+default-timeout=3333
+# ignore-timeout=1
+layer=overlay

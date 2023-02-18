@@ -25,13 +25,11 @@ function setJavaVersion(){
 
   export PATH=$1/bin:$PATH
   export JAVA_HOME=$1
-
-  echo $JAVA_HOME
 }
 
-alias setZuluJdk13 setJavaVersion "/usr/lib/jvm/zulu13-ca-amd64"
-alias setZuluJdk11 setJavaVersion "/usr/lib/jvm/zulu11-ca-amd64"
-alias setZuluJdk8 setJavaVersion "/usr/lib/jvm/zulu8-ca-amd64"
+alias setZuluJdk13='setJavaVersion "/usr/lib/jvm/zulu13-ca-amd64"'
+alias setZuluJdk11='setJavaVersion "/usr/lib/jvm/zulu11-ca-amd64"'
+alias setZuluJdk8='setJavaVersion "/usr/lib/jvm/zulu8-ca-amd64"'
 setZuluJdk11
 
 #eval `dircolors`

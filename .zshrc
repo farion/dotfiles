@@ -2,7 +2,8 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="farion"
 
-plugins=(git mvn colorize github virtualenv pip python history ssh-agent zsh-autosuggestions docker docker-compose fzf-tab)
+plugins=(git mvn colorize github virtualenv pip python history ssh-agent zsh-autosuggestions docker docker-compose)
+# disabled plugins fzf-tab
 
 source $ZSH/oh-my-zsh.sh
 

@@ -51,9 +51,14 @@ fi
 
 if echo "${windows_in_scratch}" | grep -q "${window_id}" ; then
 	swaymsg "[con_id=${window_id}] focus"
+	swaymsg "[con_id=${window_id}] resize set width "$3"ppt height "$4"ppt, move position "$5"ppt "$6"ppt"
+	sleep 1
+	swaymsg "[con_id=${window_id}] resize set width "$3"ppt height "$4"ppt, move position "$5"ppt "$6"ppt"
 else
 	swaymsg "[con_id=${window_id}] move container to scratchpad"
 fi
+
+
 
 
 # Select window with rofi

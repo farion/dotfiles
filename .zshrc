@@ -154,3 +154,8 @@ lfcd () {
 }
 
 bindkey -s '^o' 'lfcd\n' 
+
+export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin/"
+
+
+autoload zcalc 

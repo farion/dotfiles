@@ -1,17 +1,16 @@
 {
-  "layer": "bottom",
+  "layer": "top",
   "position": "top",
-  "height": 36,
+  "height": 30,
 
-  "modules-left": ["custom/swayicon", "sway/workspaces", "sway/mode"],
-  "modules-center": [],
+  "modules-left": ["custom/swayicon", "wlr/workspaces", "hyprland/submap"],
+  "modules-center": ["hyprland/window"],
   "modules-right": [
     "keyboard-state",
     "tray",
     "cpu",
     "temperature",
     "memory",
-    "custom/scratchpads",
     "custom/clipboard",
     "idle_inhibitor",
     "backlight",
@@ -19,15 +18,14 @@
     "battery",
     "clock"
   ],
-  "sway/mode": {
-    "format": " {}"
+  "hyprland/window": {
+    "format": " {}",
+    "separate-outputs": true
   },
-  "custom/scratchpads": {
-    "interval": 3,
-    "exec": "swaymsg -t get_tree | ~/.config/waybar/modules/scratchpads.py",
-    "format": "{} ",
-    "on-click": "swaymsg 'scratchpad show'",
-    "on-click-right": "swaymsg 'move scratchpad'"
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
   },
   "keyboard-state": {
     "numlock": false,
@@ -40,6 +38,17 @@
       "locked": "",
       "unlocked": ""
     }
+  },
+
+  "hyprland/submap": {
+    "format": " {}"
+  },
+  "custom/scratchpads": {
+    "interval": 3,
+    "exec": "swaymsg -t get_tree | ~/.config/waybar/modules/scratchpads.py",
+    "format": "{} ",
+    "on-click": "swaymsg 'scratchpad show'",
+    "on-click-right": "swaymsg 'move scratchpad'"
   },
   "sway/workspaces": {
     "format": "{name}",

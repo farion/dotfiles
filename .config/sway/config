@@ -2,10 +2,11 @@
 set $mod Mod4
 
 # Prefered Terminal
-set $term terminator
+set $term foot
 
 focus_follows_mouse no
 
-include ~/.config/sway/conf-enabled/*.conf
-
 include /etc/sway/config.d/*
+
+include ~/.config/sway/conf/*.conf
+

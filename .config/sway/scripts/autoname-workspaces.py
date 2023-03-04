@@ -19,6 +19,7 @@ WINDOW_ICONS = {
     "google-chrome": "",
     "terminator": "",
     "foot": "",
+    "kitty": "",
     "jetbrains-idea": "",
     "thunderbird": "",
     "freelook": "",

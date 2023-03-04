@@ -18,10 +18,10 @@ window {
 }
 
 #workspaces button {
-  padding: 0 0px;
+  padding: 0 5px;
   color: #bbbbbb;
   border-radius: 5px;
-  margin: 5px 3px;
+  margin: 3px;
   background-color: #222222;
 }
 
@@ -34,13 +34,18 @@ window {
   color: #00d93d;
 }
 
+#workspaces button.active {
+  background-color: #00d93a;
+  color: #000000;
+}
+
 #window {
   color: #00d93a;
   font-weight: bold;
   margin: 3px;
 }
 
-#mode,
+#submap,
 #temperature,
 #battery,
 #tray,
@@ -61,7 +66,7 @@ window {
   padding: 0px 5px;
   min-width: 25px;
   background-color: #222222;
-  margin: 5px 3px;
+  margin: 3px 3px 3px 3px;
   border-radius: 5px;
 }
 
@@ -71,13 +76,13 @@ window {
 
 #keyboard-state label.locked {
   padding: 0px 8px 0px 8px;
-  background-color: #ff0000;
-  color: #ffffff;
+  background-color: #00d93a;
+  color: #000000;
   border-radius: 5px;
-  margin: 5px 10px 5px 3px;
+  margin: 3px 3px 3px 3px;
 }
 
-#mode {
+#submap {
   background-color: #ff0000;
   color: #ffffff;
   font-weight: bold;
@@ -86,7 +91,7 @@ window {
 #custom-swayicon {
   padding: 0 5px;
   margin: 10px;
-  background-image: url("../../Bilder/Wallpaper/waybarlogo.png");
+  background-image: url ("../../Bilder/Wallpaper/waybarlogo.png");
   background-size: contain;
   background-repeat: no-repeat;
   min-width: 80px;

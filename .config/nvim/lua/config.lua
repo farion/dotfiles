@@ -229,7 +229,7 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
+vim.cmd [[colorscheme industry]]
 
 -- [[ Basic Keymaps ]]
 
@@ -506,6 +506,29 @@ require('onedark').setup {
     ["@function.builtin"] = {fg = '#0059ff'}
   }
 }
+
+require("null-ls").setup {
+  sources = {
+    require("null-ls").builtins.formatting.shfmt, -- shell script formatting
+    require("null-ls").builtins.formatting.prettier -- css, js, ts, html, md 
+  }
+}
+
+vim.cmd('map <Leader>lf :lua vim.lsp.buf.format(nil, 10000)<CR>')
+
+local null_ls = require("null-ls")
+local shellcheck_formatter = {
+    method = null_ls.methods.FORMATTING,
+    filetypes = { "json" },
+    generator = null_ls.formatter({
+        command = "prettier",
+        args = { "--parser", "json", "--stdin-filepath", '$FILENAME' },
+        to_stdin = true,
+        from_stderr = true,
+    }),
+}
+null_ls.register(shellcheck_formatter)
+
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

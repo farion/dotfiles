@@ -9,11 +9,13 @@ source $ZSH/oh-my-zsh.sh
 
 # taskwarrior and timewarrior aliases
 alias ti='timew'
-alias tsw='timew summary :week :ids'
-alias ts='timew summary :ids'
+alias tsw='timew summary :week :ids :annotations'
+alias ts='timew summary :ids :annotations'
 alias ta='task'
 alias taa='task add'
 alias tt='task +today'
+
+alias n='nvim'
 
 setopt no_bare_glob_qual
 

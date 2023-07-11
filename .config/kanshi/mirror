@@ -1,0 +1,5 @@
+profile "Office KA Stammplatz mit Dockingstation"{
+  output eDP-1 enable position 0,0 scale 2
+  output DP-4 enable mirror eDP-1
+}
+

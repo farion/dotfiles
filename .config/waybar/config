@@ -84,7 +84,8 @@
   "clock": {
     "format": "{:  %d.%m.   %H:%M:%S}",
     "interval": 1,
-    "tooltip": false
+    "tooltip": false,
+	"on-click": "swaymsg -q exec gsimplecal"
   },
   "battery": {
     "format": "{capacity}% {icon}",

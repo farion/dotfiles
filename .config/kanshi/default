@@ -4,28 +4,78 @@ profile "Office KA Stammplatz"{
   output 'Dell Inc. DELL P2723D 6LQK0N3' enable mode 2560x1440 position 4480,0 scale 1
 }
 
-profile "Office KA Stammplatz mit Dockingstation"{
+
+profile "Office KA Named" {
+  output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
+  output DP-3 enable mode 2560x1440 position 1920,0 scale 1
+  output DP-2 enable mode 2560x1440 position 4480,0 scale 1
+}
+
+profile "Office KA KA10"{
+  output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
+  output DP-4 enable mode 1920x1080 position 1920,0 scale 1
+}
+
+profile "Office KA mit Dockingstation 1 Monitor"{
   output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
   output DVI-I-1 enable mode 2560x1440 position 1920,0 scale 1
-  output DVI-I-2 enable mode 2560x1440 position 4480,0 scale 1
-  output DP-2 disable
-  output DP-3 disable
+}
+
+profile "Office KA Stammplatz mit Dockingstation"{
+  output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
+  output DP-3 enable mode 2560x1440 position 1920,0 scale 1
+  output DP-2 enable mode 2560x1440 position 4480,0 scale 1
+  output DVI-I-1 disable
+  output DVI-I-2 disable
 }
 
 profile "Office KA Stammplatz mit Dockingstation 3"{
   output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
-  output DVI-I-1 enable mode 2560x1440 position 1920,0 scale 1
-  output DVI-I-2 enable mode 2560x1440 position 4480,0 scale 1
-  output DP-1 disable
-  output DP-3 disable
+  output DP-3 enable mode 2560x1440 position 1920,0 scale 1
+  output DP-1 enable mode 2560x1440 position 4480,0 scale 1
+  output DVI-I-1 disable
+  output DVI-I-2 disable
 }
 
+profile "Office KA Stammplatz mit Dockingstation 4"{
+  output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
+  output DP-3 enable mode 2560x1440 position 1920,0 scale 1
+  output DP-1 enable mode 2560x1440 position 4480,0 scale 1
+  output DVI-I-1 disable
+  output DVI-I-2 disable
+}
+
+profile "Office KA Stammplatz mit Dockingstation 5"{
+  output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
+  output DVI-I-1 enable mode 2560x1440 position 1920,0 scale 1
+  output DVI-I-2 enable mode 2560x1440 position 4480,0 scale 1
+  output DP-2 disable
+}
 
 profile "Office KA Stammplatz mit Dockingstation 2"{
   output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
   output DVI-I-1 enable mode 2560x1440 position 1920,0 scale 1
   output DVI-I-2 enable mode 2560x1440 position 4480,0 scale 1
   output DP-3 disable
+}
+
+profile "Office KA Stammplatz mit Dockingstation 6"{
+  output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
+  output DVI-I-1 enable mode 2560x1440 position 1920,0 scale 1
+  output DVI-I-2 enable mode 2560x1440 position 4480,0 scale 1
+  output DP-1 disable
+}
+
+profile "Office KA Stammplatz mit Dockingstation 7"{
+  output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
+  output DVI-I-1 enable mode 2560x1440 position 1920,0 scale 1
+  output DVI-I-2 enable mode 2560x1440 position 4480,0 scale 1
+}
+
+profile "Office KA Stammplatz mit Dockingstation 8"{
+  output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
+  output DP-3 enable mode 2560x1440 position 1920,0 scale 1
+  output DP-1 enable mode 2560x1440 position 4480,0 scale 1
 }
 
 profile "HomeOffice"{
@@ -35,8 +85,8 @@ profile "HomeOffice"{
 }
 
 profile "HomeOffice Nur Rechts"{
-  output 'Sharp Corporation 0x14D0 0x00000000' disable 
-  output 'Goldstar Company Ltd LG HDR 4K 0x0000F7BA' enable mode 3840x2160@60.0000Hz position 0,0 scale 1.5
+  output 'Sharp Corporation 0x14D0 Unknown' disable 
+  output 'LG Electronics LG HDR 4K 0x0007F2BA' enable mode 3840x2160@60.0000Hz position 0,0 scale 1.5
 }
 
 profile "HomeOffice Nur Links"{

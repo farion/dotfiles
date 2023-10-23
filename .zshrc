@@ -13,4 +13,8 @@ plugins=(git mvn colorize github virtualenv pip python history ssh-agent zsh-aut
 
 source $ZSH/oh-my-zsh.sh
 
+alias gs="git status"
+
 #eval "$(starship init zsh)"
+
+export PATH=$PATH:/home/frre/.cargo/bin

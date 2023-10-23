@@ -29,6 +29,12 @@ profile "Office KA Stammplatz mit Dockingstation"{
   output DVI-I-2 disable
 }
 
+profile "RCT Projektflaeche"{
+  output eDP-1 enable mode 3840x2400@59.994Hz position 1920,600 scale 2
+  output DP-5 enable mode 1920x1200 position 0,0 scale 1
+  output DP-4 enable mode 1920x1200 position 3840,0 scale 1
+}
+
 profile "Office KA Stammplatz mit Dockingstation 3"{
   output eDP-1 enable mode 3840x2400@59.994Hz position 0,600 scale 2
   output DP-3 enable mode 2560x1440 position 1920,0 scale 1

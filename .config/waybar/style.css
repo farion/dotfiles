@@ -56,6 +56,7 @@ window {
 #custom-weather,
 #custom-mail,
 #custom-clipboard,
+#custom-headphones,
 #custom-scratchpads,
 #custom-version {
   padding: 0px 5px;
@@ -63,6 +64,14 @@ window {
   background-color: #222222;
   margin: 5px 3px;
   border-radius: 5px;
+}
+
+#custom-headphones.warning {
+  color: rgba(255, 210, 4, 1);
+}
+
+#custom-headphones.critical {
+  color: rgba(238, 46, 36, 1);
 }
 
 #keyboard-state label {

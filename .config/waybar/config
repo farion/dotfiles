@@ -1,189 +1,248 @@
 {
-  "layer": "bottom",
-  "position": "top",
-  "height": 36,
-
-  "modules-left": ["custom/swayicon", "sway/workspaces", "sway/mode"],
-  "modules-center": [],
-  "modules-right": [
-    "keyboard-state",
-    "tray",
-    "cpu",
-    "temperature",
-    "memory",
-    "custom/scratchpads",
-    "custom/clipboard",
-    "idle_inhibitor",
-    "backlight",
-    "pulseaudio",
-    "battery",
-    "clock"
-  ],
-  "sway/mode": {
-    "format": " {}"
-  },
-  "custom/scratchpads": {
-    "interval": 3,
-    "exec": "swaymsg -t get_tree | ~/.config/waybar/modules/scratchpads.py",
-    "format": "{} ",
-    "on-click": "swaymsg 'scratchpad show'",
-    "on-click-right": "swaymsg 'move scratchpad'"
-  },
-  "keyboard-state": {
-    "numlock": false,
-    "capslock": true,
-    "format": {
-      "numlock": "{icon}",
-      "capslock": "{icon} CAPS LOCK"
-    },
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    }
-  },
-  "sway/workspaces": {
-    "format": "{name}",
-    "disable-scroll": true
-  },
-  "custom/version": {
-    "interval": 5,
-    "format": "foo{}",
-    "exec": "swaymsg -t get_version"
-  },
-  "custom/swayicon": {
-    "format": "  "
-  },
-  "cpu": {
-    "interval": 1,
-    "format": "{icon} {usage:>2}% ",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
-  },
-  "memory": {
-    "interval": 30,
-    "format": "{icon} {percentage}% ",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
-  },
-  "custom/clipboard": {
-    "format": "{} ",
-    "interval": "once",
-    "return-type": "json",
-    "on-click": "swaymsg -q exec '$clipboard'; pkill -RTMIN+9 waybar",
-    "on-click-right": "swaymsg -q exec '$clipboard-del'; pkill -RTMIN+9 waybar",
-    "on-click-middle": "swaymsg -q exec '$clipboard-del-all'",
-    "exec": "~/.config/waybar/modules/getclipboardcount.sh",
-    "exec-if": "exit 0",
-    "signal": 9
-  },
-  "sway/window": {
-    "max-length": 80,
-    "tooltip": false,
-    "format": "{title}",
-    "icon": true,
-    "icon-size": 22
-  },
-  "clock": {
-    "format": "{:  %d.%m.   %H:%M:%S}",
-    "interval": 1,
-    "tooltip": false,
-	"on-click": "swaymsg -q exec gsimplecal"
-  },
-  "battery": {
-    "format": "{capacity}% {icon}",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""],
-    "format-charging": "{capacity}% ",
-    "format-full": "",
-    "interval": 5,
-    "states": {
-      "warning": 25,
-      "critical": 10
-    },
-    "tooltip": false
-  },
-  "network": {
-    "format": "{icon}",
-    "format-alt": "{ipaddr}/{cidr} {icon}",
-    "format-alt-click": "click-right",
-    "format-icons": {
-      "wifi": ["", "", ""],
-      "ethernet": [""],
-      "disconnected": [""]
-    },
-    "on-click": "termite -e nmtui",
-    "tooltip": false
-  },
-  "temperature": {
-    "format": "{temperatureC:3}° ",
-    "hwmon-path": "/sys/class/thermal/thermal_zone10/temp",
-    "on-click": "foot watch -n1 sensors"
-  },
-  "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-muted": "{volume}% ",
-    "format-icons": {
-      "phone": [" ", " ", " ", " "],
-      "default": ["", "", "", ""]
-    },
-    "scroll-step": 10,
-    "on-click": "pavucontrol",
-    "tooltip": false
-  },
-  "custom/spotify": {
-    "interval": 1,
-    "return-type": "json",
-    "exec": "~/.config/waybar/modules/spotify.sh",
-    "exec-if": "pgrep spotify",
-    "escape": true
-  },
-  "custom/storage": {
-    "format": "{} ",
-    "format-alt": "{percentage}% ",
-    "format-alt-click": "click-right",
-    "return-type": "json",
-    "interval": 60,
-    "exec": "~/.config/waybar/modules/storage.sh"
-  },
-  "backlight": {
-    "format": "{percent}% {icon}",
-    "format-icons": ["", ""],
-    "on-scroll-down": "sudo light -A 10",
-    "on-scroll-up": "sudo light -U 10"
-  },
-  "custom/weather": {
-    "format": "{}",
-    "format-alt": "{alt}: {}",
-    "format-alt-click": "click-right",
-    "interval": 1800,
-    "return-type": "json",
-    "exec": "~/.config/waybar/modules/weather.sh",
-    "exec-if": "ping wttr.in -c1"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    },
-    "tooltip": false
-  },
-  "custom/mail": {
-    "format": "",
-    "format-alt": "{alt} ",
-    "format-alt-click": "click-right",
-    "interval": 60,
-    "return-type": "json",
-    "exec": "~/.config/waybar/modules/mail.py",
-    "tooltip": false
-  },
-  "custom/test": {
-    "format": "{}",
-    "exec": "/tmp/test blub",
-    "param": "blah",
-    "interval": 5
-  },
-  "tray": {
-    "icon-size": 18,
-    "spacing": 10
-  },
-  "_vim_": { "modeline": "/* vim: set ft=json noet ts=4 sw=4: */" }
+	"layer": "bottom",
+	"position": "top",
+	"height": 36,
+	"modules-left": [
+		"custom/swayicon",
+		"sway/workspaces",
+		"sway/mode"
+	],
+	"modules-center": [],
+	"modules-right": [
+		"keyboard-state",
+		"tray",
+		"cpu",
+		"temperature",
+		"memory",
+		"custom/scratchpads",
+		"custom/clipboard",
+		"idle_inhibitor",
+		"custom/headphones",
+		"backlight",
+		"pulseaudio",
+		"battery",
+		"clock"
+	],
+	"custom/headphones": {
+		"interval": 5,
+		"exec": "~/.config/waybar/modules/headphones.sh",
+		"return-type": "json",
+		"format": "{}",
+		"tooltip": false
+	},
+	"sway/mode": {
+		"format": " {}"
+	},
+	"custom/scratchpads": {
+		"interval": 3,
+		"exec": "swaymsg -t get_tree | ~/.config/waybar/modules/scratchpads.py",
+		"format": "{} ",
+		"on-click": "swaymsg 'scratchpad show'",
+		"on-click-right": "swaymsg 'move scratchpad'"
+	},
+	"keyboard-state": {
+		"numlock": false,
+		"capslock": true,
+		"format": {
+			"numlock": "{icon}",
+			"capslock": "{icon} CAPS LOCK"
+		},
+		"format-icons": {
+			"locked": "",
+			"unlocked": ""
+		}
+	},
+	"sway/workspaces": {
+		"format": "{name}",
+		"disable-scroll": true
+	},
+	"custom/version": {
+		"interval": 5,
+		"format": "foo{}",
+		"exec": "swaymsg -t get_version"
+	},
+	"custom/swayicon": {
+		"format": "  ",
+		"tooltip": false
+	},
+	"cpu": {
+		"interval": 1,
+		"format": "{icon} {usage:>2}% ",
+		"format-icons": [
+			"▁",
+			"▂",
+			"▃",
+			"▄",
+			"▅",
+			"▆",
+			"▇",
+			"█"
+		]
+	},
+	"memory": {
+		"interval": 30,
+		"format": "{icon} {percentage}% ",
+		"format-icons": [
+			"▁",
+			"▂",
+			"▃",
+			"▄",
+			"▅",
+			"▆",
+			"▇",
+			"█"
+		]
+	},
+	"custom/clipboard": {
+		"format": "{} ",
+		"interval": "once",
+		"return-type": "json",
+		"on-click": "swaymsg -q exec '$clipboard'; pkill -RTMIN+9 waybar",
+		"on-click-right": "swaymsg -q exec '$clipboard-del'; pkill -RTMIN+9 waybar",
+		"on-click-middle": "swaymsg -q exec '$clipboard-del-all'",
+		"exec": "~/.config/waybar/modules/getclipboardcount.sh",
+		"exec-if": "exit 0",
+		"signal": 9
+	},
+	"sway/window": {
+		"max-length": 80,
+		"tooltip": false,
+		"format": "{title}",
+		"icon": true,
+		"icon-size": 22
+	},
+	"clock": {
+		"format": "{:  %d.%m.   %H:%M:%S}",
+		"interval": 1,
+		"tooltip": false,
+		"on-click": "swaymsg -q exec gsimplecal"
+	},
+	"battery": {
+		"format": "{capacity}% {icon}",
+		"format-alt": "{time} {icon}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"format-charging": "{capacity}% ",
+		"format-full": "",
+		"interval": 5,
+		"states": {
+			"warning": 25,
+			"critical": 10
+		},
+		"tooltip": false
+	},
+	"network": {
+		"format": "{icon}",
+		"format-alt": "{ipaddr}/{cidr} {icon}",
+		"format-alt-click": "click-right",
+		"format-icons": {
+			"wifi": [
+				"",
+				"",
+				""
+			],
+			"ethernet": [
+				""
+			],
+			"disconnected": [
+				""
+			]
+		},
+		"on-click": "termite -e nmtui",
+		"tooltip": false
+	},
+	"temperature": {
+		"format": "{temperatureC:3}° ",
+		"hwmon-path": "/sys/class/thermal/thermal_zone10/temp",
+		"on-click": "foot watch -n1 sensors"
+	},
+	"pulseaudio": {
+		"format": "{volume}% {icon}",
+		"format-muted": "{volume}% ",
+		"format-icons": {
+			"phone": [
+				" ",
+				" ",
+				" ",
+				" "
+			],
+			"default": [
+				"",
+				"",
+				"",
+				""
+			]
+		},
+		"scroll-step": 1,
+		"on-click": "pavucontrol",
+		"tooltip": false
+	},
+	"custom/spotify": {
+		"interval": 1,
+		"return-type": "json",
+		"exec": "~/.config/waybar/modules/spotify.sh",
+		"exec-if": "pgrep spotify",
+		"escape": true
+	},
+	"custom/storage": {
+		"format": "{} ",
+		"format-alt": "{percentage}% ",
+		"format-alt-click": "click-right",
+		"return-type": "json",
+		"interval": 60,
+		"exec": "~/.config/waybar/modules/storage.sh"
+	},
+	"backlight": {
+		"format": "{percent}% {icon}",
+		"format-icons": [
+			"",
+			""
+		],
+		"on-scroll-down": "sudo light -A 10",
+		"on-scroll-up": "sudo light -U 10"
+	},
+	"custom/weather": {
+		"format": "{}",
+		"format-alt": "{alt}: {}",
+		"format-alt-click": "click-right",
+		"interval": 1800,
+		"return-type": "json",
+		"exec": "~/.config/waybar/modules/weather.sh",
+		"exec-if": "ping wttr.in -c1"
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		},
+		"tooltip": false
+	},
+	"custom/mail": {
+		"format": "",
+		"format-alt": "{alt} ",
+		"format-alt-click": "click-right",
+		"interval": 60,
+		"return-type": "json",
+		"exec": "~/.config/waybar/modules/mail.py",
+		"tooltip": false
+	},
+	"custom/test": {
+		"format": "{}",
+		"exec": "/tmp/test blub",
+		"param": "blah",
+		"interval": 5
+	},
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10
+	},
+	"_vim_": {
+		"modeline": "/* vim: set ft=json noet ts=4 sw=4: */"
+	}
 }

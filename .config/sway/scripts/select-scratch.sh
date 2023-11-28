@@ -1,9 +1,9 @@
 #!/bin/zsh
 
 # Get regular windows
-windows=$(swaymsg -t get_tree | jq -r '.. | select(.name?) | select(.id?) | select(.name|test("'${1}'")) | .id')
+windows=$(swaymsg -t get_tree | jq -r '.. | select(.name? or .app_id?) | select(.id?) | select(((.name? != null) and (.name|test("'${1}'"))) or ((.app_id != null) and (.app_id|test("'${1}'")))) | .id')
 
-scratches=$(swaymsg -t get_tree | jq -r '.nodes[].nodes[] | select(.name=="__i3_scratch") | .. | select(.name?) | select(.id?) | select(.name|test("'${1}'")) | .id')
+scratches=$(swaymsg -t get_tree | jq -r '.nodes[].nodes[] | select(.name=="__i3_scratch" or .app_id=="__i3_scratch") | .. | select(.name? or .app_id?) | select(.id?) | select(((.name? != null) and (.name|test("'${1}'"))) or ((.app_id != null) and (.app_id|test("'${1}'")))) | .id')
 
 
 window_id="$(printf "%s" $windows)"

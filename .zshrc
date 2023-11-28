@@ -18,3 +18,7 @@ alias gs="git status"
 #eval "$(starship init zsh)"
 
 export PATH=$PATH:/home/frre/.cargo/bin
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc

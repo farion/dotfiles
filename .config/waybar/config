@@ -7,22 +7,53 @@
 		"sway/workspaces",
 		"sway/mode"
 	],
-	"modules-center": [],
+	"modules-center": [
+	],
 	"modules-right": [
 		"keyboard-state",
+		"custom/timewarrior",
+		"custom/strava",
 		"tray",
 		"cpu",
 		"temperature",
 		"memory",
 		"custom/scratchpads",
 		"custom/clipboard",
+		"custom/pause",
 		"idle_inhibitor",
+		"custom/hammerhead",
 		"custom/headphones",
 		"backlight",
 		"pulseaudio",
 		"battery",
 		"clock"
 	],
+	"custom/hammerhead": {
+		"interval": 5,
+		"exec": "~/.config/waybar/modules/hammerhead.sh",
+		"return-type": "json",
+		"format": "{}",
+		"tooltip": false
+	},
+	"custom/pause": {
+		"interval": 5,
+		"exec": "~/.config/waybar/modules/pause.sh",
+		"return-type": "json",
+		"format": "{icon}",
+		"format-icons": {
+			"pause": "",
+			"unpause": ""
+		},
+		"tooltip": true,
+		"on-click": "/opt/exxeta/timetracking/control.py toggle"
+	},
+	"custom/timewarrior": {
+		"interval": 5,
+		"exec": "~/.config/waybar/modules/timewarrior",
+		"return-type": "json",
+		"format": "{}",
+		"tooltip": false
+	},
 	"custom/headphones": {
 		"interval": 5,
 		"exec": "~/.config/waybar/modules/headphones.sh",
@@ -30,9 +61,36 @@
 		"format": "{}",
 		"tooltip": false
 	},
+	"custom/strava": {
+		"interval": 1800,
+		"exec": "~/.config/waybar/modules/strava.sh",
+		"return-type": "json",
+		"format": "{}",
+		"tooltip": false
+	},
 	"sway/mode": {
 		"format": " {}"
 	},
+	  "custom/notification": {
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 	"custom/scratchpads": {
 		"interval": 3,
 		"exec": "swaymsg -t get_tree | ~/.config/waybar/modules/scratchpads.py",
@@ -112,7 +170,7 @@
 		"icon-size": 22
 	},
 	"clock": {
-		"format": "{:  %d.%m.   %H:%M:%S}",
+		"format": " {:%d.%m.   %H:%M:%S}",
 		"interval": 1,
 		"tooltip": false,
 		"on-click": "swaymsg -q exec gsimplecal"

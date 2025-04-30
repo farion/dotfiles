@@ -19,11 +19,16 @@ WINDOW_ICONS = {
     "google-chrome": "",
     "terminator": "",
     "foot": "",
+    "TO_Timew": "",
+    "TO_Task": "",
+    "TO_BTop": "",
+    "TO_Cmd": "",
     "kitty": "",
     "jetbrains-idea": "",
     "thunderbird": "",
     "freelook": "",
-    "org.keepassxc.keepassxc":""
+    "org.keepassxc.keepassxc":"",
+    "org.gnome.Nautilus":""
 }
 
 DEFAULT_ICON = ""

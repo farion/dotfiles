@@ -56,9 +56,14 @@ window {
 #custom-weather,
 #custom-mail,
 #custom-clipboard,
+#custom-hammerhead,
 #custom-headphones,
 #custom-scratchpads,
-#custom-version {
+#custom-version,
+#custom-strava,
+#custom-timewarrior,
+#custom-pause,
+#custom-notification {
   padding: 0px 5px;
   min-width: 25px;
   background-color: #222222;
@@ -66,12 +71,19 @@ window {
   border-radius: 5px;
 }
 
+#custom-hammerhead.warning,
 #custom-headphones.warning {
   color: rgba(255, 210, 4, 1);
 }
 
+#custom-timewarrior,
+#custom-hammerhead.critical,
 #custom-headphones.critical {
   color: rgba(238, 46, 36, 1);
+}
+
+#custom-timewarrior.active {
+  color: rgba(1, 197, 1, 1);
 }
 
 #keyboard-state label {

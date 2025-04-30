@@ -45,7 +45,7 @@
 			"unpause": ""
 		},
 		"tooltip": true,
-		"on-click": "/opt/exxeta/timetracking/control.py toggle"
+		"on-click": "timetracking_control toggle"
 	},
 	"custom/timewarrior": {
 		"interval": 5,

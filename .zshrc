@@ -47,3 +47,9 @@ esac
 #
 eval "$(task --completion zsh)"
 eval "$(direnv hook zsh)"
+
+
+alias ollama="docker exec -it ollama_gpu ollama"
+
+PATH=$PATH:"$HOME/Android/Sdk/platform-tools"
+export ANDROID_HOME="$HOME/Android/Sdk/"

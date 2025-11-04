@@ -30,6 +30,30 @@ profile "Office KA Stammplatz"{
   output $kaBaseDirectRight
 }
 
+profile "Office Stuttgart 2" {
+    output $intern
+   output 'Dell Inc. DELL U2719D 9MM9P83' enable mode 2560x1440 position 1920,0 scale 1
+
+  }
+profile "Office Ka Sales1"{
+  output 'Sharp Corporation 0x14D0 Unknown' enable mode 3840x2400@59.994Hz position 0,600 scale 2
+  output 'Dell Inc. DELL P2723D 3VKK0N3' enable mode 2560x1440 position 1920,0 scale 1
+}
+
+
+
+profile "Office KA Curved1" {
+    output $intern
+    output 'HP Inc. HP 534pm CNC50600YB' enable mode 3440x1440@74.983Hz position 1920,0 scale 1
+  }
+
+profile "Office KA oben" {
+  output $intern
+  output 'Dell Inc. DELL P2723D B4BXVP3' enable mode 2560x1440 position 1920,0 scale 1
+  output 'Dell Inc. DELL P2723D 64BXVP3' enable mode 2560x1440 position 4480,0 scale 1
+  exec notify-send "Office KA oben"
+}
+
 profile "Office KA Stammplatz mit Dockingstation"{
   output $intern 
   output $kaBaseDirectLeft
@@ -48,6 +72,26 @@ profile "Office KA Stammplatz mit Dockingstation 2"{
   exec notify-send "Office KA Stammplatz mit Dockingstation und direktem USB-C"
 }
 
+profile "Office KA Stammplatz mit Dockingstation 3"{
+  output $intern 
+  output $kaBaseDirectLeft
+  output $kaBaseDirectRight
+  output "DVI-I-1" disable
+  output "DVI-I-3" disable
+  exec notify-send "Office KA Stammplatz mit Dockingstation und direktem USB-C"
+}
+
+profile "Office KA Stammplatz mit Dockingstation 4"{
+  output $intern 
+  output $kaBaseDirectLeft
+  output $kaBaseDirectRight
+  output "DVI-I-2" disable
+  output "DVI-I-3" disable
+  exec notify-send "Office KA Stammplatz mit Dockingstation und direktem USB-C"
+}
+
+
+
 profile "Office KA Platz eins rechts" {
   output $intern
   output "Dell Inc. DELL P2723D 384T1L3" enable mode 2560x1440 position 2560,0 scale 1
@@ -55,7 +99,12 @@ profile "Office KA Platz eins rechts" {
   exec notify-send "Office KA Platz eins rechts"
 }
 
-
+profile "Office Mannheim 2" {
+    output $intern
+    output "Dell Inc. DELL P2723D 9Y3T1L3" enable mode 2560x1440 position 1920,0 scale 1
+    output "Dell Inc. DELL P2723D 6VDT1L3" enable mode 2560x1440 position 4480,0 scale 1
+    exec notify-send "Office MA 2"
+}
 
 #profile "Office KA Stammplatz mit Dockingstation 3"{
 #  output $intern 

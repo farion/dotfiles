@@ -51,6 +51,7 @@ window {
 #pulseaudio,
 #idle_inhibitor,
 #backlight,
+#language,
 #custom-storage,
 #custom-spotify,
 #custom-weather,
@@ -69,6 +70,10 @@ window {
   background-color: #222222;
   margin: 5px 3px;
   border-radius: 5px;
+}
+
+#language {
+  min-width: 40px;
 }
 
 #custom-hammerhead.warning,

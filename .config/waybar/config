@@ -23,6 +23,7 @@
 		"idle_inhibitor",
 		"custom/hammerhead",
 		"custom/headphones",
+		"sway/language",
 		"backlight",
 		"pulseaudio",
 		"battery",
@@ -66,7 +67,7 @@
 		"exec": "~/.config/waybar/modules/strava.sh",
 		"return-type": "json",
 		"format": "{}",
-		"tooltip": false
+		"tooltip": true
 	},
 	"sway/mode": {
 		"format": " {}"
@@ -113,6 +114,9 @@
 	"sway/workspaces": {
 		"format": "{name}",
 		"disable-scroll": true
+	},
+	"sway/language": {
+		"format": "⌨ {short}"
 	},
 	"custom/version": {
 		"interval": 5,

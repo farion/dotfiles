@@ -1,5 +1,7 @@
 function setJavaVersion(){
-  for i in `update-alternatives --list java`
+  [[ -d "$1" ]] || return 0
+
+  for i in `update-alternatives --list java 2>/dev/null`
   do
     escapedi=$(echo -n $i | sed 's/bin\/java/bin/g' | sed 's/\//\\\//g')
     PATH=$(echo -n $PATH | sed "s/$escapedi://g");

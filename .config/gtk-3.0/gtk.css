@@ -4,3 +4,7 @@
 
 /* Ändert die Farbe für aktive Buttons/Schalter */
 @define-color accent_bg_color #00ff00;
+
+.gsimplecal-window .calendar {
+  width: 300px;
+}

@@ -34,3 +34,4 @@ alias gd='git diff'
 
 
 alias dops='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}"'
+alias ollama="docker exec -it ollama_gpu ollama"

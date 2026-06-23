@@ -1,2 +1,0 @@
-#!/bin/bash
-sudo apt install pyenv direnv neovim cmatrix fuzzel grim slurp swappy xdg-utils sway-notification-center dunst nextcloud-desktop python-is-python3 pavucontrol pavucontrol wob adwaita-icon-theme gnome-themes-extra adwaita-icon-theme-legacy fonts-adwaita fonts-adwaita-sans thunar wl-clipboard cliphist equivs python3-gi gir1.2-gtk-3.0 'gir1.2-webkit2-4.*' pipx build-essential python3-dev libgirepository1.0-dev libcairo2-dev pkg-config gir1.2-gtk-3.0 papirus-icon-theme nwg-look

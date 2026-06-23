@@ -1,4 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
+export ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 
 export EDITOR=nvim
 
@@ -14,8 +15,6 @@ plugins=(git mvn colorize github virtualenv pip python history zsh-autosuggestio
 source $ZSH/oh-my-zsh.sh
 
 alias gs="git status"
-
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #eval "$(starship init zsh)"
 
@@ -35,10 +34,6 @@ if [[ $TERM =~ "^foot" ]]; then
 	zle -N clear-screen clear-screen-keep-sb
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # pnpm
 export PNPM_HOME="/home/frre/.local/share/pnpm"
 case ":$PATH:" in
@@ -50,8 +45,6 @@ esac
 eval "$(task --completion zsh)"
 eval "$(direnv hook zsh)"
 
-
-alias ollama="docker exec -it ollama_gpu ollama"
 
 PATH=$PATH:"$HOME/Android/Sdk/platform-tools"
 export ANDROID_HOME="$HOME/Android/Sdk/"

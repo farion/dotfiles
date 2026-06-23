@@ -18,7 +18,7 @@ window {
 }
 
 #workspaces button {
-  padding: 0 0px;
+  padding: 0 5px 0 8px;
   color: #bbbbbb;
   border-radius: 5px;
   margin: 5px 3px;
@@ -112,7 +112,7 @@ window {
 #custom-swayicon {
   padding: 0 5px;
   margin: 10px;
-  background-image: url("../../Bilder/Wallpaper/waybarlogo.png");
+  background-image: url("/home/frre/.config/waybar/waybarlogo.png");
   background-size: contain;
   background-repeat: no-repeat;
   min-width: 80px;

@@ -6,7 +6,7 @@ export LANG=de_DE.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-ZSH_THEME="farion"
+ZSH_THEME="agnoster"
 export NVM_LAZY_LOAD=true
 
 plugins=(git mvn colorize github virtualenv pip python history zsh-autosuggestions docker docker-compose zsh-nvm)
@@ -14,6 +14,8 @@ plugins=(git mvn colorize github virtualenv pip python history zsh-autosuggestio
 source $ZSH/oh-my-zsh.sh
 
 alias gs="git status"
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #eval "$(starship init zsh)"
 
@@ -53,3 +55,9 @@ alias ollama="docker exec -it ollama_gpu ollama"
 
 PATH=$PATH:"$HOME/Android/Sdk/platform-tools"
 export ANDROID_HOME="$HOME/Android/Sdk/"
+
+# Created by `pipx` on 2026-06-22 16:32:26
+export PATH="$PATH:/home/frre/.local/bin"
+
+# opencode
+export PATH=/home/frre/.opencode/bin:$PATH

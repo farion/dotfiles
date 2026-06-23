@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo cryptsetup open /opt/private.iso private
+sudo mount /dev/mapper/private /opt/private
